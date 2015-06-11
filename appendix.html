@@ -118,6 +118,37 @@
                           </tr>
                         </table>
                         
+                        <p><strong>J48 node order:</strong></p>
+                        <p>Inclusion: votes.funny > review_count > yelping_for_period</p>
+                        <p>Exclusion: yelping_for_period > review_count > review_stars_avg > biz_stars_avg</p>
+                        
+                        <p><strong>[Validation Set Results]</strong> - application of training model on validation set)</p>
+                        <em>: Inclusion Results</em>
+                        
+                        <table class="table">
+                            <tr>
+                                <td>trees.J48</td>
+                                <td>94.839%</td>
+                            </tr>
+                            <tr>
+                                <td>rules.BayesNet</td>
+                                <td>67.8169%</td>
+                            </tr>
+                        </table>
+                        
+                        <em>: Exclusion Results</em>
+                        
+                        <table class="table">
+                            <tr>
+                                <td>trees.J48</td>
+                                <td>71.0032%</td>
+                            </tr>
+                            <tr>
+                                <td>rules.BayesNet</td>
+                                <td>64.3891%</td>
+                            </tr>
+                        </table>
+                        
                         <h4><strong>Threshold 1</strong></h4>
                         <table class="table">
                           <tr>
