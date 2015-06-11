@@ -84,7 +84,7 @@
                         <h4><a href="#">Appendix</a></h4>
                         <p>The below is a snippet from some of our latter iterations: please feel free to skim everything after this line. We have added this section with purely the intent to show a small part of our learning progress up until this point. </p>
                         
-                        <h4><strong>Threshold 2</strong></h4>
+                        <h4><strong>Threshold: 2</strong></h4>
                         <table class="table">
                           <tr>
                             <td><strong>Classifier</strong></td>
@@ -149,7 +149,7 @@
                             </tr>
                         </table>
                         
-                        <h4><strong>Threshold 1</strong></h4>
+                        <h4><strong>Threshold: 1</strong></h4>
                         <table class="table">
                           <tr>
                             <td><strong>Classifier</strong></td>
@@ -181,6 +181,37 @@
                             <td>57.6981%</td>
                             <td>57.2051%</td>
                           </tr>
+                        </table>
+                        
+                        <p><strong>J48 node order:</strong></p>
+                        <p>Inclusion: votes_total > review_count > biz_stars_avg</p>
+                        <p>Exclusion: yelping_for_period> review_count > biz_review_count_avg</p>
+                        
+                        <p><strong>[Validation Set Results]</strong> - application of training model on validation set)</p>
+                        <em>: Inclusion Results</em>
+                        
+                        <table class="table">
+                            <tr>
+                                <td>trees.J48</td>
+                                <td>96.8813%</td>
+                            </tr>
+                            <tr>
+                                <td>rules.BayesNet</td>
+                                <td>67.9248%</td>
+                            </tr>
+                        </table>
+                        
+                        <em>: Exclusion Results</em>
+                        
+                        <table class="table">
+                            <tr>
+                                <td>trees.J48</td>
+                                <td>63.5411%</td>
+                            </tr>
+                            <tr>
+                                <td>rules.BayesNet</td>
+                                <td>66.2302%</td>
+                            </tr>
                         </table>
                     </div>
                 </div>
