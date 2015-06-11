@@ -129,14 +129,11 @@
 </p>
                         
                         <h5><strong>Graphs</strong></h5>
-                        <div class="row">
-                            <img class="col-md-5" text-align="center" align="center" src="train_thresh1.png"/>
-                            <img class="col-md-5" text-align="center" align="center" src="train_thresh2.png"/>
-                        </div>
-                        <img text-align="center" align="center" src="train_thresh1.png"/>
-                        <img text-align="center" align="center" src="train_thresh2.png"/>
-                        <img text-align="center" align="center" src="valid_set_thresh1.png"/>
-                        <img text-align="center" align="center" src="valid_set_thresh2.png"/>
+                        
+                        <img class="col-md-5" text-align="center" align="center" style="width: 50%; float: left;" src="train_thresh1.png"/>
+                        <img class="col-md-5" text-align="center" align="center" style="width: 50%; float: left;" src="train_thresh2.png"/>
+                        <img text-align="center" align="center" style="width: 50%; float: left;" src="valid_set_thresh1.png"/>
+                        <img text-align="center" align="center" style="width: 50%; float: left;" src="valid_set_thresh2.png"/>
                         
                         <h6><strong>Analysis</strong></h6>
                         <p>As expected, the results from the “inclusive” set had higher accuracy (approx. 95% for each threshold) - the funny vote and cool votes indeed seemed tightly coupled with our target attribute. Decision trees (75%) and Bayes Net (68%) performed the best out of all the applied machine learning algorithms overall. J48 has a slight loss of about 4~8% on the validation set depending on the threshold, but seems to show that it was less of an overfit, which would be important for larger data sets.</p>
