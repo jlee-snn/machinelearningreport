@@ -130,15 +130,19 @@
                         
                         <h5><strong>Graphs</strong></h5>
                         
-                        <img class="col-md-5" text-align="center" align="center" style="width: 50%; float: left;" src="train_thresh1.png"/>
-                        <img class="col-md-5" text-align="center" align="center" style="width: 50%; float: left;" src="train_thresh2.png"/>
-                        <img text-align="center" align="center" style="width: 50%; float: left;" src="valid_set_thresh1.png"/>
-                        <img text-align="center" align="center" style="width: 50%; float: left;" src="valid_set_thresh2.png"/>
+                        <div>
+                            <img class="col-md-5" text-align="center" align="center" style="width: 50%; float: left;" src="train_thresh1.png"/>
+                            <img class="col-md-5" text-align="center" align="center" style="width: 50%; float: left;" src="train_thresh2.png"/> 
+                            <img text-align="center" align="center" style="width: 50%; float: left;" src="valid_set_thresh1.png"/>
+                            <img text-align="center" align="center" style="width: 50%; float: left;" src="valid_set_thresh2.png"/>
+                        </div>
                         
-                        <h6 style="margin-top: 5px;"><strong>Analysis</strong></h6>
+                        <div>
+                            <h6 style="margin-top: 5px; position:relative;"><strong>Analysis</strong></h6>
                         <p>As expected, the results from the “inclusive” set had higher accuracy (approx. 95% for each threshold) - the funny vote and cool votes indeed seemed tightly coupled with our target attribute. Decision trees (75%) and Bayes Net (68%) performed the best out of all the applied machine learning algorithms overall. J48 has a slight loss of about 4~8% on the validation set depending on the threshold, but seems to show that it was less of an overfit, which would be important for larger data sets.</p>
                         <p>Taking a closer look at the nodes the j48 trees would split on, interestingly, it seems that the number of stars of the business reviewed, as well as the number of the reviews the business had, was a factor on deciding user usefulness. The data seems to express that under similar user profile conditions, users were more likely to say that a review was helpful if the business being reviewed had a higher number of stars or if the business already had a large number of reviews.</p>
                         <p>In general the accuracies for threshold 2 were about 10% greater than in threshold 1 in the training sets. In the validation sets, the accuracies were about the same - thus suggesting the existence of a correlation regardless of threshold bounds. In terms of the validation set, j48 seemed to outdo BayesNet for the inclusion set (95% vs. 68%) while both the models rested closely against the 70% line for the exclusion set. The findings conclude a useful or significant relationship between the user provided votes and our desired output function, whereas the exclusion of user provided votes results in no significant attributes nor relationship.  However, a correlation may be easily determined by a combination of attributes (ex. review count and reviewed business information) and latching upon their relative correlations.</p>
+                        </div>
                         
                         <h5><strong>Suggestions for Future Work</strong></h5>
                         <p>From observation, Yelp seems to employ a custom algorithm to differentiate between good recommendations and bad. A comparison into this algorithm may prove to be of use and may inspire the generation of further possible attributes. </p>
