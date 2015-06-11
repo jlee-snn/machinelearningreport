@@ -81,9 +81,20 @@
                     <div class="caption-full">
                         <h4><a href="#">Full Report Abstract</a></h4>
                         <h5><strong>Motivation</strong></h5>
-                       
                         <p>Businesses are often tempted to boost their reputation online by creating fake accounts and posting fake reviews on websites such as Yelp and Glassdoor. Being able to filter unhelpful or false accounts (aka. is the user “useful” or not) would allow business reviews to reflect the opinions of clients accurately.</p>
 
+                        <h5><strong>Training / Test Method</strong></h5>
+                        <p>Attributes included from the Yelp dataset for each user include user account age, average star rating, number of reviews, number of friends, whether the user has elite status, total funny votes, and total cool votes. The total funny votes and total cool votes were very highly correlated with our target attribute and are attributes that require input from other users, so we had two categories for testing: Testing that included those two attributes (inclusive) and testing that did not use those attributes (exclusive).</p>
+                        <p>In total, there are two sets of attributes and two definitions for our target attribute, giving us 4 categories:</p>
+                        <ul>
+                            <li>inclusive and 1 useful vote per review to be “useful” (threshold 1)
+</li>
+                            <li>inclusive and 2 useful votes per review to be “useful” (threshold 2)
+</li>
+                            <li>exclusive and threshold 1</li>
+                            <li>exclusive and threshold 2</li>
+                        </ul>
+                        <p>In addition to attributes that the Yelp dataset provided, we also added attributes using natural language processing on user reviews such as average review length and average swears per review.</p>
                         <img text-align="center" align="center" src="abstract_graph.png"/>
                     </div>
                 </div>
