@@ -95,6 +95,12 @@
                             <li>exclusive and threshold 2</li>
                         </ul>
                         <p>In addition to attributes that the Yelp dataset provided, we also added attributes using natural language processing on user reviews such as average review length and average swears per review.</p>
+                        
+                        <h5><strong>Results</strong></h5>
+                        <p>We trained against 5 main models - ZeroR, J48 Decision Tree, Decision Table, Bayes Net, Naive Bayes, and IBk Nearest Neighbour. Out of these, J48 and Bayes Net proved to perform the best on the training data, hence these were the models we used against the validation set. It turned out that J48 was the best fit (75% training and 65% validation) - IBk had been overfitting of the data with roughly 57% accuracy on the validation set.</p>
+                        <p>In terms of including community provided information, the number of funny votes and the review count of the user seemed to provide the highest information gain. For an investigation excluding community provided information, the total number of a user’s reviews and how long it had been since the user had made the account seemed to be the attributes of highest information gain.</p>
+                        
+                        <h5><strong>Graphs</strong></h5>
                         <img text-align="center" align="center" src="abstract_graph.png"/>
                     </div>
                 </div>
